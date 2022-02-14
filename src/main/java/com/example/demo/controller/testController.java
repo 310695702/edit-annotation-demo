@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.annotation.SaveLog;
 import com.example.demo.annotation.testInterface;
 import com.example.demo.comment.Result;
 import com.example.demo.dao.pojo.Test;
@@ -48,5 +49,10 @@ public class testController {
     @GetMapping("/current")
     public Result checkLogin(@testInterface Test test){
         return Result.ok(test);
+    }
+
+    @GetMapping("/SaveLog")
+    @SaveLog
+    public void SaveLog(){
     }
 }

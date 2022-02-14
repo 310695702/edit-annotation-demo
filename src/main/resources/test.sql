@@ -20,8 +20,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 -- Table structure for test
 -- ----------------------------
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE `test`  (
+-- DROP TABLE IF EXISTS `test`;
+CREATE TABLE IF NOT EXISTS `test`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -31,6 +31,5 @@ CREATE TABLE `test`  (
 -- ----------------------------
 -- Records of test
 -- ----------------------------
-INSERT INTO `test` VALUES (1, 'ceshi', '123456');
 
 SET FOREIGN_KEY_CHECKS = 1;

@@ -1,5 +1,6 @@
 package com.example.demo.config;
 
+import com.example.demo.resolver.SaveLogResolver;
 import com.example.demo.resolver.testResolver;
 import com.example.demo.service.testService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.List;
  * @date: 2021-07-16 8:34
  **/
 @Configuration
-public class testConfig implements WebMvcConfigurer {
+public class ResolverConfig implements WebMvcConfigurer {
 
     @Autowired
     private testService testService;
@@ -23,5 +24,6 @@ public class testConfig implements WebMvcConfigurer {
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
         resolvers.add(new testResolver(testService));
+        resolvers.add(new SaveLogResolver(testService));
     }
 }

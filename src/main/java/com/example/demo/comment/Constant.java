@@ -1,5 +1,7 @@
 package com.example.demo.comment;
 
+import java.util.Map;
+
 /**
  * @version: V1.0
  * @author: HanYuXing
@@ -7,5 +9,15 @@ package com.example.demo.comment;
  **/
 public class Constant {
 
-    public static final String APP_SECRET = "asdlkanaapcok1-203o/"; //秘钥
+    /**
+     * 密钥
+     */
+    public static final String APP_SECRET = "asdlkanaapcok1-203o/";
+
+
+    public static Map<String, String> CONTRACT_KIND;
+
+    public static void setContractKind(Map<String, String> contractKind) {
+        CONTRACT_KIND = contractKind;
+    }
 }
