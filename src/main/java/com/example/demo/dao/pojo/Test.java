@@ -1,7 +1,10 @@
 package com.example.demo.dao.pojo;
 
+import lombok.ToString;
+
 import javax.persistence.*;
 
+@ToString
 public class Test {
     @Id
     private Integer id;
